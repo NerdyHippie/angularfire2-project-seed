@@ -1,7 +1,7 @@
 <div class="app-content">
 	<h1>Test Page</h1>
 	
-	<!-- Buttons -->
+	<h3>Buttons</h3>
 	<md-card>
 		<button md-button>FLAT</button>
 		<button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
@@ -9,7 +9,7 @@
 		<button md-raised-button color="accent">ACCENT RAISED</button>
 	</md-card>
 	
-	<!-- Checkboxes -->
+	<h3>Checkboxes</h3>
 	<md-card>
 		<md-checkbox>Unchecked</md-checkbox>
 		<md-checkbox [checked]="true">Checked</md-checkbox>
@@ -17,16 +17,35 @@
 		<md-checkbox [disabled]="true">Disabled</md-checkbox>
 	</md-card>
 	
-	<!-- Radio Buttons -->
+	<h3>Radio Buttons</h3>
 	<md-card>
 		<md-radio-button name="symbol">Alpha</md-radio-button>
 		<md-radio-button name="symbol">Beta</md-radio-button>
 		<md-radio-button name="symbol" disabled>Gamma</md-radio-button>
 	</md-card>
 	
-	<!-- Slider -->
+	<h3>Slider</h3>
 	<md-card>
 		<md-slider min="1" max="5"></md-slider>
 	</md-card>
+	
+	<h3>Icons</h3>
+	<md-icon>fingerprint</md-icon>
+	<button md-icon-button>
+		<md-icon class="md-24">favorite</md-icon>
+	</button>
+	<button md-fab>
+		<md-icon class="md-24">fingerprint</md-icon>
+	</button>
+	<button md-mini-fab>
+		<md-icon class="md-24">add</md-icon>
+	</button>
 
+	
+	<h3>FontAwesome Icons</h3>
+	<md-icon class="fa-2x" fontSet="fa" fontIcon="fa-birthday-cake"></md-icon>
+	<button md-raised-button>
+		<md-icon class="md-24 fa-lg" fontSet="fa" fontIcon="fa-camera-retro"></md-icon>
+		Say Cheez!
+	</button>
 </div>
