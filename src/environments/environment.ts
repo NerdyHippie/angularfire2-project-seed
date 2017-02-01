@@ -7,10 +7,15 @@ export const environment = {
   production: false
   ,name: 'Development'
   ,firebaseConfig: {
-		apiKey: "YOUR_DEV_API_KEY",
-    authDomain: "YOUR_DEV_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://YOUR_DEV_PROJECT_ID.firebaseio.com",
-    storageBucket: "YOUR_DEV_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_DEV_MESSAGE_ID"
+		apiKey: "AIzaSyAvf_ea4vEzxfVL2NeuUO6ckZvvORjXA_U",
+		authDomain: "sample-project-e4fb2.firebaseapp.com",
+		databaseURL: "https://sample-project-e4fb2.firebaseio.com",
+		storageBucket: "sample-project-e4fb2.appspot.com",
+		messagingSenderId: "147368635993"
+		/*apiKey: "YOUR_DEV_API_KEY",
+		 authDomain: "YOUR_DEV_PROJECT_ID.firebaseapp.com",
+		 databaseURL: "https://YOUR_DEV_PROJECT_ID.firebaseio.com",
+		 storageBucket: "YOUR_DEV_PROJECT_ID.appspot.com",
+		 messagingSenderId: "YOUR_DEV_MESSAGE_ID"*/
   }
 };

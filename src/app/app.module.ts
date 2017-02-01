@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarModule,EditorModule,SharedModule} from 'primeng/primeng';
+import 'hammerjs'
 
 // App Routing
 import { AppRouting,AppRoutingComponents } from './app.routing';
@@ -14,6 +15,7 @@ import { AuthGuard } from './global/_guards/index';
 // Project Modules
 import { AdminModule } from './admin/admin.module';
 import { GlobalModule } from './global/global.module';
+import { TestModule } from './test/test.module';
 
 // Components
 import { AppComponent }  from './app.component';
@@ -43,6 +45,7 @@ export const PrimeModules: Array<any> = [CalendarModule,EditorModule,GlobalModul
     ,AppRouting
     ,AdminModule
     ,GlobalModule
+	  ,TestModule
   ],
   declarations: [
     AppComponent,
