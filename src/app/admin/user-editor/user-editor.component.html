@@ -1,0 +1,30 @@
+<loading-message [waitFor]="user" [message]="'Loading User Editor'"></loading-message>
+
+<div *ngIf="user">
+	<button class="btn btn-default btn-sm pull-right " *ngIf="showLinkButton()" (click)="toggleLinkOptions()" [class.active]="showLinkOptions">Link Social Media Accounts</button>
+	<h3><span *ngIf="user.$key">Edit</span><span *ngIf="!user.$key">Create</span> User</h3>
+	<link-account *ngIf="showLinkOptions"></link-account>
+	<form (submit)="saveUser()">
+		<div class="form-group">
+			<label>First Name</label>
+			<input type="text" class="form-control" name="firstName" [(ngModel)]="user.firstName">
+		</div>
+		<div class="form-group">
+			<label>Last Name</label>
+			<input type="text" class="form-control" name="lastName" [(ngModel)]="user.lastName">
+		</div>
+		<div class="form-group">
+			<label>Email</label>
+			<input type="text" class="form-control" name="email" [(ngModel)]="user.email">
+		</div>
+		<div class="form-group" *ngIf="currentUser.admin">
+			<label>Admin</label>
+			<input type="checkbox" class="form-check" name="admin" [(ngModel)]="user.admin">
+		</div>
+		<button type="submit" class="btn btn-primary">Save</button>
+		<button type="button" class="btn btn-default" (click)="cancelEdit()">Cancel</button>
+	
+	</form>
+</div>
+
+

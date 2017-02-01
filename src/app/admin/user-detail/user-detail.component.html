@@ -1,0 +1,11 @@
+<loading-message [waitFor]="user" [message]="'Loading User Detail'"></loading-message>
+
+<div *ngIf="user">
+	<button type="button" class="btn btn-outline-default btn-sm pull-right" (click)="editUser()"><i class="fa fa-pencil"></i> Edit</button>
+	<h4>User Detail</h4>
+	<div>{{user.firstName}} {{user.lastName}} <span *ngIf="user.admin">[ADMIN]</span></div>
+	<div><i>{{user.email}}</i></div>
+	
+	<pre>{{user | json}}</pre>
+</div>
+

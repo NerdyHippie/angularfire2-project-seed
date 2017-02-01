@@ -1,10 +1,10 @@
-import { NgCliPage } from './app.po';
+import { StarterProjectPage } from './app.po';
 
 describe('ng-cli App', function() {
-  let page: NgCliPage;
+  let page: StarterProjectPage;
 
   beforeEach(() => {
-    page = new NgCliPage();
+    page = new StarterProjectPage();
   });
 
   it('should display message saying app works', () => {

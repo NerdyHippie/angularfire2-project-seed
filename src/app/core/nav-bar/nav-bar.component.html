@@ -1,0 +1,24 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+	<button class="navbar-toggler navbar-toggler-right" type="button" (click)="toggleCollapse()" *ngIf="loggedIn">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" routerLink="/">Starter Project</a>
+	
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault" [ngbCollapse]="isCollapsed" *ngIf="loggedIn">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+				<a class="nav-link" (click)="collapseNav()" routerLink="/">Home</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" (click)="collapseNav()" routerLink="/admin">Admin</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" routerLink="/profile/{{getProfileLink()}}" (click)="collapseNav()">My Profile</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" (click)="logout()">Log Out</a>
+			</li>
+		</ul>
+		
+	</div>
+</nav>

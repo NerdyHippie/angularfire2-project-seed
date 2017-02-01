@@ -1,0 +1,35 @@
+<h2>User Manager</h2>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<table class="table table-sm table-hover">
+				<tbody>
+				<tr class="new-user">
+					<td colspan="3" routerLink="/admin/users/create" routerLinkActive="table-selected">
+						<a routerLink="/admin/users/create"><i class="fa fa-plus"></i> Create New User</a>
+					</td>
+				</tr>
+				<tr class="users" *ngFor="let user of users">
+					<td routerLink="/admin/users/{{user.$key}}" routerLinkActive="table-selected" width="50">
+						<img class="user-icon" [src]="user.photoURL" *ngIf="user.photoURL">
+					</td>
+					<td routerLink="/admin/users/{{user.$key}}" routerLinkActive="table-selected">
+						<a routerLink="/admin/users/edit/{{user.$key}}">{{user.displayName ? user.displayName : user.firstName + ' ' + user.lastName}}</a>
+					</td>
+					<td width="10%" align="center" routerLink="/admin/users/edit/{{user.$key}}" routerLinkActive="table-selected">
+						<a routerLink="/admin/users/edit/{{user.$key}}"><i class="fa fa-pencil" title="Edit"></i></a>
+					</td>
+					<td width="10%">
+						<span *ngIf="user.admin">[ADMIN]</span>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>
+

@@ -5,4 +5,12 @@
 
 export const environment = {
   production: false
+  ,name: 'Development'
+  ,firebaseConfig: {
+		apiKey: "YOUR_DEV_API_KEY",
+    authDomain: "YOUR_DEV_PROJECT_ID.firebaseapp.com",
+    databaseURL: "https://YOUR_DEV_PROJECT_ID.firebaseio.com",
+    storageBucket: "YOUR_DEV_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_DEV_MESSAGE_ID"
+  }
 };
