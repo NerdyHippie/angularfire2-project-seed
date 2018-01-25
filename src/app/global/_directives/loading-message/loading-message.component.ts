@@ -6,17 +6,15 @@ import { Observable } from "rxjs/Observable";
     selector:    'loading-message',
     templateUrl: 'loading-message.component.html'
 })
-export class LoadingMessageComponent implements OnInit,OnChanges,OnDestroy {
+export class LoadingMessageComponent implements OnInit, OnChanges, OnDestroy {
     constructor() { }
-    
     @Input() waitFor: Observable<any>;
-		@Input() message: Observable<string>;
-    
+    @Input() message: Observable<string>;
     showLoadMessage: Boolean = false;
 
     ngOnInit() { }
-		ngOnChanges(changes:SimpleChanges) {
-			this.showLoadMessage = changes['waitFor'].currentValue;
-		}
+    ngOnChanges(changes: SimpleChanges) {
+      this.showLoadMessage = changes['waitFor'].currentValue;
+    }
     ngOnDestroy() { }
 }

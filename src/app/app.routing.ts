@@ -14,40 +14,40 @@ import { UserDetailComponent } from './admin/user-detail/user-detail.component';
 import { UserEditorComponent } from './admin/user-editor/user-editor.component';
 
 const appRoutes: Routes = [
-    {
-        path: ''
-        ,component: HomeComponent
-				,canActivate: [ AuthGuard ]
-    },{
-        path: 'calendar'
-        ,component: CalendarComponent
-				,canActivate: [ AuthGuard ]
-    },{
-				path: 'profile/:id'
-				,component: UserDetailComponent
-				,canActivate: [ AuthGuard ]
-		},{
-				path: 'profile/edit/:id'
-				,component: UserEditorComponent
-				,canActivate: [ AuthGuard ]
-		},{
-        path: 'login'
-        ,component: LoginComponent
-    },{
-        path: 'logout'
-        ,component: LogoutComponent
-    },{
-        path: 'register'
-        ,component: RegisterComponent
-    },{
-        path: 'reset'
-        ,component: ResetRequestComponent
-    },{
-        path: 'emailAction'
-        ,component: EmailActionComponent
-				,pathMatch: 'prefix'
-    }
+  {
+    path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  }, {
+    path: 'calendar',
+    component: CalendarComponent,
+    canActivate: [AuthGuard]
+  }, {
+    path: 'profile/:id',
+    component: UserDetailComponent,
+    canActivate: [AuthGuard]
+  }, {
+    path: 'profile/edit/:id',
+    component: UserEditorComponent,
+    canActivate: [AuthGuard]
+  }, {
+    path: 'login',
+    component: LoginComponent
+  }, {
+    path: 'logout',
+    component: LogoutComponent
+  }, {
+    path: 'register',
+    component: RegisterComponent
+  }, {
+    path: 'reset',
+    component: ResetRequestComponent
+  }, {
+    path: 'emailAction',
+    component: EmailActionComponent,
+    pathMatch: 'prefix'
+  }
 ];
 
-export const AppRoutingComponents = [HomeComponent,CalendarComponent,LoginComponent,LogoutComponent,RegisterComponent,ResetRequestComponent,EmailActionComponent];
+export const AppRoutingComponents = [HomeComponent, CalendarComponent, LoginComponent, LogoutComponent, RegisterComponent, ResetRequestComponent, EmailActionComponent];
 export const AppRouting: ModuleWithProviders = RouterModule.forRoot(appRoutes);
