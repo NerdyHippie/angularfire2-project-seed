@@ -41,8 +41,6 @@ A started project using Angular-CLI, and Firebase Auth, Database and Hosting.
 
 Please take a moment and read our [Code of Conduct](CODE_OF_CONDUCT.md)
 
-
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
