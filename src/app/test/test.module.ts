@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 
-import { MdCoreModule } from '@angular2-material/core'
+/*import { MdCoreModule } from '@angular2-material/core'
 import { MdButtonModule } from '@angular2-material/button';
 import { MdCardModule } from '@angular2-material/card';
 import { MdRadioModule } from '@angular2-material/radio';
@@ -26,18 +26,19 @@ import { MdTabsModule } from '@angular2-material/tabs';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 
 
-import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
+import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';*/
 
-import { TestRouting,TestRouteComponents } from './test.routing';
+import { TestRouting, TestRouteComponents } from './test.routing';
 
 
 @NgModule({
   imports: [
     CommonModule,
-	  BrowserModule,
-	  FormsModule,
-	  HttpModule,
-	  TestRouting,
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    TestRouting
+    /*,
 	  MdButtonModule.forRoot(),
 	  MdButtonToggleModule.forRoot(),
 	  MdCardModule.forRoot(),
@@ -56,12 +57,12 @@ import { TestRouting,TestRouteComponents } from './test.routing';
 	  MdSlideToggleModule.forRoot(),
 	  MdTabsModule.forRoot(),
 	  MdToolbarModule.forRoot(),
-	  MdTooltipModule.forRoot()
+	  MdTooltipModule.forRoot()*/
   ],
   declarations: [TestRouteComponents]
 })
 export class TestModule {
-	constructor(mdIconRegistry: MdIconRegistry) {
+  /*constructor(mdIconRegistry: MdIconRegistry) {
 		mdIconRegistry.registerFontClassAlias('fontawesome', 'fa');
-	}
+	}*/
 }

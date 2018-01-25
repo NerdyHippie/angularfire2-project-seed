@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from "../../global/_services/authentication.service";
 
 export interface ResetModel {
-	email: string
+  email: string;
 }
 
 @Component({
@@ -13,21 +13,17 @@ export interface ResetModel {
 })
 
 export class ResetRequestComponent implements OnInit {
-		model:ResetModel = {email:''};
-	
-    constructor(
-    	private authenticationService:AuthenticationService,
-			private router:Router
-		) { }
-
-    ngOnInit() { }
-    
-    requestReset(model:ResetModel) {
-    	console.log('reset password',model);
-    	this.authenticationService.requestReset(model.email).then((data:any) => {
-    		console.log('reset data',data);
-				this.router.navigate(['/login']);
-			}).catch((error:any) => console.error('reset error',error));
-		}
-    
+  model: ResetModel = {email: ''};
+  constructor(private authenticationService: AuthenticationService,
+              private router: Router) {
+  }
+  ngOnInit() {
+  }
+  requestReset(model: ResetModel) {
+    console.log('reset password', model);
+    this.authenticationService.requestReset(model.email).then((data: any) => {
+      console.log('reset data', data);
+      this.router.navigate(['/login']);
+    }).catch((error: any) => console.error('reset error', error));
+  }
 }

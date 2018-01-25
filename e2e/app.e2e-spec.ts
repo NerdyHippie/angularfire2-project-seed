@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('groovy-task App', () => {
+describe('angularfire2-project-seed App', () => {
   let page: AppPage;
 
   beforeEach(() => {
