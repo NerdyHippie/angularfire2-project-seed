@@ -27,9 +27,6 @@ A started project using Angular-CLI, and Firebase Auth, Database and Hosting.
 	- `YOUR_DEV_PROJECT_ID` - your dev project ID.
 	- `YOUR_DEV_API_KEY` - the API key from your dev project 
 	- `YOUR_DEV_MESSAGE_ID` - the Message Sender Id from your dev project
-1. To add more environments, check out the following files:  
-	- /app/environments/env.conditions.ts
-	- /app/main.ts
 1. `npm install` to install dependencies	
 1. `npm run start` to run your project
 1. `npm run dev-build-and-deploy` to build as development and push to your dev Firebase Hosting
