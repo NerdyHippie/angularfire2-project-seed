@@ -3,3 +3,15 @@
 	-webkit-column-count: @args;
 	-moz-column-count: @args;
 }
+
+.drop-shadow (@hShadow: 7px, @vShadow: 7px, @blur: 5px, @spread: 0px, @color: rgba(50, 50, 50, 0.75)) {
+  -moz-box-shadow:    @hShadow @vShadow @blur @spread @color;
+  -webkit-box-shadow: @hShadow @vShadow @blur @spread @color;
+  box-shadow:         @hShadow @vShadow @blur @spread @color;
+}
+
+.border-radius (@rad: 8px) {
+  border-radius: @rad;
+  -webkit-border-radius: @rad;
+  -moz-border-radius: @rad;
+}

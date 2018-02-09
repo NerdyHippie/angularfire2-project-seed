@@ -77,6 +77,9 @@ export class UserService {
         userData.dateCreated = moment().format();
         usr.set(userData);
       } else {
+        if (!userData.displayName) {
+          delete userData.displayName;
+        }
         usr.update(userData);
       }
 

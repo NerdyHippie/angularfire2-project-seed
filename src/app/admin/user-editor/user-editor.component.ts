@@ -22,6 +22,15 @@ export class UserEditorComponent extends UserDetailComponent implements OnInit, 
     this.userService.currentUser.subscribe((data: any) => this.currentUser = data);
   }
   saveUser() {
+    if (!this.user.displayName && (this.user.firstName || this.user.lastName)) {
+      this.user.displayName = this.user.firstName.length ? this.user.firstName + ' ' + this.user.lastName : this.user.lastName;
+    }
+    if (this.user.displayName && !(this.user.firstName || this.user.lastName)) {
+      const names = this.user.displayName.split(' ');
+      this.user.lastName = names[names.length - 1];
+      this.user.firstName = this.user.displayName.replace(' ' + this.user.lastName, '');
+    }
+    //console.log('this.user', this.user);
     this.user.$key ? this.updateUser() : this.createUser();
   }
   cancelEdit() {
@@ -40,10 +49,15 @@ export class UserEditorComponent extends UserDetailComponent implements OnInit, 
     this.usrSvc.getUser(this.user.$key).set(this.utils.cleanObj(this.user)).then(this.openDetail.bind(this));
   }
   openDetail() {
-    this.router.navigate(['../../' + this.savedUser.key]);
+    this.router.navigate(['admin/users/' + this.savedUser.key]);
   }
   showLinkButton() {
-    return this.currentUser ? (this.currentUser.admin || this.currentUser.uid == this.id) : false;
+    let showIt = false;
+    if (this.currentUser) {
+      // console.log('cu', this.currentUser);
+      showIt = (this.currentUser.uid === this.id);
+    }
+    return showIt;
   }
   toggleLinkOptions() {
     this.showLinkOptions = !this.showLinkOptions;

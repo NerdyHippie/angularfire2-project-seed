@@ -14,10 +14,14 @@
 			<input type="text" class="form-control" name="lastName" [(ngModel)]="user.lastName">
 		</div>
 		<div class="form-group">
+			<label>Display Name</label>
+			<input type="text" class="form-control" name="displayName" [(ngModel)]="user.displayName">
+		</div>
+		<div class="form-group">
 			<label>Email</label>
 			<input type="text" class="form-control" name="email" [(ngModel)]="user.email">
 		</div>
-		<div class="form-group" *ngIf="currentUser.admin">
+		<div class="form-group" *ngIf="currentUser && currentUser.admin">
 			<label>Admin</label>
 			<input type="checkbox" class="form-check" name="admin" [(ngModel)]="user.admin">
 		</div>
@@ -26,5 +30,6 @@
 	
 	</form>
 </div>
+
 
 
